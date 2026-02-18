@@ -95,6 +95,7 @@ export interface Tier {
     name: string;
     status: 'locked' | 'active' | 'completed';
     earnings: number;
+    commissionBps: number; // e.g., 100 = 1%
     requirements: TierRequirement[];
     nextUnlock?: string;
 }
@@ -134,7 +135,7 @@ export const MOCK_USER: UserProfile = {
     id: 'u1',
     name: 'Alex Morgan',
     role: 'Loan Officer',
-    tier: 'Diamond',
+    tier: 'Senior Partner',
     avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 };
 
@@ -247,6 +248,7 @@ export const MOCK_TIERS: Tier[] = [
         name: 'Associate',
         status: 'completed',
         earnings: 2500,
+        commissionBps: 100,
         requirements: [
             { description: 'Personal Volume', current: 1000000, target: 500000, type: 'volume' }
         ]
@@ -256,6 +258,7 @@ export const MOCK_TIERS: Tier[] = [
         name: 'Partner',
         status: 'completed',
         earnings: 4500,
+        commissionBps: 110,
         requirements: [
             { description: 'Recruits', current: 3, target: 2, type: 'recruits' },
             { description: 'Org Volume', current: 2000000, target: 1500000, type: 'org_volume' }
@@ -266,6 +269,7 @@ export const MOCK_TIERS: Tier[] = [
         name: 'Senior Partner',
         status: 'active',
         earnings: 0,
+        commissionBps: 125,
         nextUnlock: 'Tier 3 Bonus Pool',
         requirements: [
             { description: 'Personal Volume', current: 1250000, target: 1500000, type: 'volume' },
@@ -277,6 +281,7 @@ export const MOCK_TIERS: Tier[] = [
         name: 'Director',
         status: 'locked',
         earnings: 0,
+        commissionBps: 140,
         requirements: [
             { description: 'Org Volume', current: 3500000, target: 5000000, type: 'org_volume' }
         ]

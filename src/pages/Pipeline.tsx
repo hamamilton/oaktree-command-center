@@ -1,23 +1,31 @@
 
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { fetchDeals } from '../services/mockData';
-import type { Deal } from '../services/mockData';
-import { ArrowLeft, Search, Filter } from 'lucide-react';
+import { fetchDeals, fetchUser, fetchTiers } from '../services/mockData';
+import type { Deal, UserProfile, Tier } from '../services/mockData';
+import { ArrowLeft, Search, Filter, DollarSign } from 'lucide-react';
 
 const Pipeline = () => {
     const navigate = useNavigate();
     const [deals, setDeals] = useState<Deal[]>([]);
+    const [user, setUser] = useState<UserProfile | null>(null);
+    const [tiers, setTiers] = useState<Tier[]>([]);
     const [loading, setLoading] = useState(true);
     const [filterStage, setFilterStage] = useState<string>('All');
 
     useEffect(() => {
         const loadData = async () => {
             try {
-                const data = await fetchDeals();
-                setDeals(data);
+                const [dealsData, userData, tiersData] = await Promise.all([
+                    fetchDeals(),
+                    fetchUser(),
+                    fetchTiers()
+                ]);
+                setDeals(dealsData);
+                setUser(userData);
+                setTiers(tiersData);
             } catch (error) {
-                console.error("Failed to load deals", error);
+                console.error("Failed to load pipeline data", error);
             } finally {
                 setLoading(false);
             }
@@ -25,6 +33,10 @@ const Pipeline = () => {
 
         loadData();
     }, []);
+
+    // Find active tier BPS
+    const activeTier = tiers.find(t => t.name === user?.tier);
+    const userBps = activeTier?.commissionBps || 100; // Default to 100bps if not found
 
     const filteredDeals = filterStage === 'All'
         ? deals
@@ -110,7 +122,12 @@ const Pipeline = () => {
                         </div>
                         <div className="text-right">
                             <p className="font-bold text-gray-900 dark:text-white text-sm">{formatCurrency(deal.loanAmount)}</p>
-                            <p className="text-xs text-gray-400">Close: {new Date(deal.closeDate).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}</p>
+                            <div className="flex items-center justify-end gap-1 mt-1 text-green-600 dark:text-green-400 font-medium text-xs">
+                                <DollarSign size={10} />
+                                <span>{formatCurrency(deal.loanAmount * (userBps / 10000))}</span>
+                                <span className="text-[10px] text-gray-400 ml-0.5">({userBps} bps)</span>
+                            </div>
+                            <p className="text-[10px] text-gray-400 mt-0.5">Close: {new Date(deal.closeDate).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}</p>
                         </div>
                     </div>
                 ))}
