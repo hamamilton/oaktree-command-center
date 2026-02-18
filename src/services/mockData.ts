@@ -480,8 +480,15 @@ export const fetchResourceById = async (id: string): Promise<Resource | undefine
     });
 };
 
+
 export const submitReferral = async (): Promise<boolean> => {
     return new Promise((resolve) => {
         setTimeout(() => resolve(true), 1000);
     });
 }
+
+// Helper to update user for Onboarding Simulation
+export const updateUserProfile = (userData: Partial<UserProfile>) => {
+    Object.assign(MOCK_USER, userData);
+};
+
