@@ -29,6 +29,8 @@ export interface Deal {
     stage: string;
     loanType: string; // e.g., 'Purchase', 'Refinance'
     closeDate: string;
+    address: string;
+    state: string;
 }
 
 export interface ProductionMetric {
@@ -156,17 +158,17 @@ export const MOCK_PIPELINE: PipelineStage[] = [
 ];
 
 export const MOCK_DEALS: Deal[] = [
-    { id: 'd1', borrowerName: 'Smith, John', loanAmount: 450000, stage: 'Clear to Close', loanType: 'Purchase', closeDate: '2026-03-15' },
-    { id: 'd2', borrowerName: 'Johnson, Emily', loanAmount: 320000, stage: 'Underwriting', loanType: 'Refinance', closeDate: '2026-03-20' },
-    { id: 'd3', borrowerName: 'Williams, Michael', loanAmount: 550000, stage: 'Underwriting', loanType: 'Purchase', closeDate: '2026-03-22' },
-    { id: 'd4', borrowerName: 'Brown, Sarah', loanAmount: 280000, stage: 'Processing', loanType: 'Purchase', closeDate: '2026-04-01' },
-    { id: 'd5', borrowerName: 'Davis, David', loanAmount: 600000, stage: 'Processing', loanType: 'Purchase', closeDate: '2026-04-05' },
-    { id: 'd6', borrowerName: 'Miller, Jennifer', loanAmount: 350000, stage: 'Processing', loanType: 'Refinance', closeDate: '2026-04-10' },
-    { id: 'd7', borrowerName: 'Wilson, Robert', loanAmount: 420000, stage: 'Application', loanType: 'Purchase', closeDate: '2026-04-15' },
-    { id: 'd8', borrowerName: 'Moore, Elizabeth', loanAmount: 380000, stage: 'Application', loanType: 'Purchase', closeDate: '2026-04-20' },
-    { id: 'd9', borrowerName: 'Taylor, Anderson', loanAmount: 500000, stage: 'Application', loanType: 'Refinance', closeDate: '2026-04-25' },
-    { id: 'd10', borrowerName: 'Anderson, Thomas', loanAmount: 750000, stage: 'Application', loanType: 'Purchase', closeDate: '2026-04-30' },
-    { id: 'd11', borrowerName: 'Thomas, Jackson', loanAmount: 450000, stage: 'Application', loanType: 'Purchase', closeDate: '2026-05-05' },
+    { id: 'd1', borrowerName: 'Smith, John', loanAmount: 450000, stage: 'Clear to Close', loanType: 'Purchase', closeDate: '2026-03-15', address: '123 Oak St', state: 'TX' },
+    { id: 'd2', borrowerName: 'Johnson, Emily', loanAmount: 320000, stage: 'Underwriting', loanType: 'Refinance', closeDate: '2026-03-20', address: '456 Maple Ave', state: 'CA' },
+    { id: 'd3', borrowerName: 'Williams, Michael', loanAmount: 550000, stage: 'Underwriting', loanType: 'Purchase', closeDate: '2026-03-22', address: '789 Pine Rd', state: 'FL' },
+    { id: 'd4', borrowerName: 'Brown, Sarah', loanAmount: 280000, stage: 'Processing', loanType: 'Purchase', closeDate: '2026-04-01', address: '101 Cedar Ln', state: 'TX' },
+    { id: 'd5', borrowerName: 'Davis, David', loanAmount: 600000, stage: 'Processing', loanType: 'Purchase', closeDate: '2026-04-05', address: '202 Birch Blvd', state: 'AZ' },
+    { id: 'd6', borrowerName: 'Miller, Jennifer', loanAmount: 350000, stage: 'Processing', loanType: 'Refinance', closeDate: '2026-04-10', address: '303 Elm St', state: 'WA' },
+    { id: 'd7', borrowerName: 'Wilson, Robert', loanAmount: 420000, stage: 'Application', loanType: 'Purchase', closeDate: '2026-04-15', address: '404 Spruce Dr', state: 'CO' },
+    { id: 'd8', borrowerName: 'Moore, Elizabeth', loanAmount: 380000, stage: 'Application', loanType: 'Purchase', closeDate: '2026-04-20', address: '505 Willow Way', state: 'TX' },
+    { id: 'd9', borrowerName: 'Taylor, Anderson', loanAmount: 500000, stage: 'Application', loanType: 'Refinance', closeDate: '2026-04-25', address: '606 Aspen Ct', state: 'FL' },
+    { id: 'd10', borrowerName: 'Anderson, Thomas', loanAmount: 750000, stage: 'Application', loanType: 'Purchase', closeDate: '2026-04-30', address: '707 Redwood Pl', state: 'CA' },
+    { id: 'd11', borrowerName: 'Thomas, Jackson', loanAmount: 450000, stage: 'Application', loanType: 'Purchase', closeDate: '2026-05-05', address: '808 Magnolia Ln', state: 'GA' },
 ];
 
 export const MOCK_PRODUCTION_HISTORY: ProductionHistoryItem[] = [
