@@ -46,7 +46,7 @@ const LeaderboardTable = ({ data, currentUserId }: LeaderboardTableProps) => {
                                 key={entry.id}
                                 className={`
                   hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors
-                  ${entry.id === currentUserId ? 'bg-blue-50/50 dark:bg-blue-900/10' : ''}
+                  ${entry.id === currentUserId ? 'bg-primary-50/50 dark:bg-primary-900/10' : ''}
                 `}
                             >
                                 <td className="px-6 py-4 whitespace-nowrap">
@@ -69,7 +69,7 @@ const LeaderboardTable = ({ data, currentUserId }: LeaderboardTableProps) => {
                                             )}
                                         </div>
                                         <div className="ml-4">
-                                            <div className={`text-sm font-medium ${entry.id === currentUserId ? 'text-blue-600 dark:text-blue-400 font-bold' : 'text-gray-900 dark:text-white'}`}>
+                                            <div className={`text-sm font-medium ${entry.id === currentUserId ? 'text-primary-600 dark:text-primary-400 font-bold' : 'text-gray-900 dark:text-white'}`}>
                                                 {entry.name} {entry.id === currentUserId && '(You)'}
                                             </div>
                                         </div>

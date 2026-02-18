@@ -33,7 +33,7 @@ const Admin = () => {
     if (loading) {
         return (
             <div className="flex items-center justify-center h-full min-h-[50vh]">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
             </div>
         );
     }
@@ -62,14 +62,14 @@ const Admin = () => {
                 <div className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
                     <div className="flex justify-between items-start mb-2">
                         <span className="text-xs text-gray-500 font-medium">Total Volume YTD</span>
-                        <Activity size={16} className="text-blue-500" />
+                        <Activity size={16} className="text-primary-500" />
                     </div>
                     <p className="text-lg font-bold text-gray-900 dark:text-white">{formatCurrency(stats.totalVolumeYTD)}</p>
                 </div>
                 <div className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
                     <div className="flex justify-between items-start mb-2">
                         <span className="text-xs text-gray-500 font-medium">Active LOs</span>
-                        <Users size={16} className="text-indigo-500" />
+                        <Users size={16} className="text-secondary-500" />
                     </div>
                     <p className="text-lg font-bold text-gray-900 dark:text-white">{stats.activeLOs}</p>
                 </div>
@@ -129,7 +129,7 @@ const Admin = () => {
                                 <p className="text-gray-500 text-xs">Prevent users from unlocking new tiers manually</p>
                             </div>
                         </div>
-                        <div className="relative inline-flex h-6 w-11 items-center rounded-full bg-blue-600">
+                        <div className="relative inline-flex h-6 w-11 items-center rounded-full bg-primary-600">
                             <span className="translate-x-6 inline-block h-4 w-4 transform rounded-full bg-white transition" />
                         </div>
                     </div>

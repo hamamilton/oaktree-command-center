@@ -33,7 +33,7 @@ const OrgChartNode = ({ node }: { node: OrgNode }) => {
                     {node.avatarUrl ? (
                         <img src={node.avatarUrl} alt={node.name} className="w-10 h-10 rounded-full object-cover" />
                     ) : (
-                        <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                        <div className="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400">
                             <User size={18} />
                         </div>
                     )}
@@ -62,7 +62,7 @@ const OrgChartNode = ({ node }: { node: OrgNode }) => {
                             e.stopPropagation();
                             setIsExpanded(!isExpanded);
                         }}
-                        className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-full p-0.5 shadow-sm text-gray-500 hover:text-blue-500 z-10"
+                        className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-full p-0.5 shadow-sm text-gray-500 hover:text-primary-500 z-10"
                     >
                         {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                     </button>

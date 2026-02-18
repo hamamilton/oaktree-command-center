@@ -51,7 +51,7 @@ const OrgTreeNode = ({ node, level = 0 }: OrgNodeProps) => {
                     {node.avatarUrl ? (
                         <img src={node.avatarUrl} alt={node.name} className="w-10 h-10 rounded-full object-cover border-2 border-white dark:border-gray-700" />
                     ) : (
-                        <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                        <div className="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400">
                             <User size={20} />
                         </div>
                     )}
@@ -73,7 +73,7 @@ const OrgTreeNode = ({ node, level = 0 }: OrgNodeProps) => {
 
                     <div className="flex items-center gap-4 mt-2">
                         <div className="flex items-center gap-1.5 text-xs text-gray-600 dark:text-gray-300">
-                            <Activity size={12} className="text-blue-500" />
+                            <Activity size={12} className="text-primary-500" />
                             <span>{formatCurrency(node.mtdProduction)} Vol</span>
                         </div>
                         {node.revShareContribution > 0 && (

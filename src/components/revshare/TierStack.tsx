@@ -30,7 +30,7 @@ const TierStack = ({ tiers }: TierStackProps) => {
                         transition={{ delay: index * 0.1 }}
                         className={`
               relative overflow-hidden rounded-2xl border transition-all duration-300
-              ${isActive ? 'bg-gradient-to-r from-blue-600 to-indigo-700 border-transparent shadow-lg scale-105 z-10' : ''}
+              ${isActive ? 'bg-gradient-to-r from-primary-600 to-secondary-700 border-transparent shadow-lg scale-105 z-10' : ''}
               ${isCompleted ? 'bg-white dark:bg-gray-800 border-green-200 dark:border-green-900/30' : ''}
               ${isLocked ? 'bg-gray-100 dark:bg-gray-900 border-gray-200 dark:border-gray-800 opacity-70' : ''}
             `}
@@ -39,7 +39,7 @@ const TierStack = ({ tiers }: TierStackProps) => {
                             <div className="flex items-center gap-4">
                                 <div className={`
                   w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg
-                  ${isActive ? 'bg-white text-blue-600' : ''}
+                  ${isActive ? 'bg-white text-primary-600' : ''}
                   ${isCompleted ? 'bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400' : ''}
                   ${isLocked ? 'bg-gray-200 dark:bg-gray-800 text-gray-500' : ''}
                 `}>
@@ -49,7 +49,7 @@ const TierStack = ({ tiers }: TierStackProps) => {
                                     <h3 className={`font-bold ${isActive ? 'text-white' : 'text-gray-900 dark:text-white'}`}>
                                         {tier.name}
                                     </h3>
-                                    <p className={`text-sm ${isActive ? 'text-blue-100' : 'text-gray-500 dark:text-gray-400'}`}>
+                                    <p className={`text-sm ${isActive ? 'text-primary-100' : 'text-gray-500 dark:text-gray-400'}`}>
                                         {isLocked ? 'Locked' : (tier.earnings > 0 ? `Earned: ${formatCurrency(tier.earnings)}` : 'In Progress')}
                                     </p>
                                 </div>
@@ -58,7 +58,7 @@ const TierStack = ({ tiers }: TierStackProps) => {
                             <div>
                                 {isCompleted && <CheckCircle className="text-green-500" size={24} />}
                                 {isLocked && <Lock className="text-gray-400 dark:text-gray-600" size={24} />}
-                                {isActive && <Unlock className="text-blue-200" size={24} />}
+                                {isActive && <Unlock className="text-primary-200" size={24} />}
                             </div>
                         </div>
 
@@ -68,11 +68,11 @@ const TierStack = ({ tiers }: TierStackProps) => {
                                 <div className="space-y-3">
                                     {tier.requirements.map((req, i) => (
                                         <div key={i}>
-                                            <div className="flex justify-between text-xs text-blue-100 mb-1">
+                                            <div className="flex justify-between text-xs text-primary-100 mb-1">
                                                 <span>{req.description}</span>
                                                 <span>{req.type === 'volume' || req.type === 'org_volume' ? formatCurrency(req.current) : req.current} / {req.type === 'volume' || req.type === 'org_volume' ? formatCurrency(req.target) : req.target}</span>
                                             </div>
-                                            <div className="h-2 bg-blue-900/30 rounded-full overflow-hidden">
+                                            <div className="h-2 bg-primary-900/30 rounded-full overflow-hidden">
                                                 <div
                                                     className="h-full bg-white/90 rounded-full"
                                                     style={{ width: `${Math.min((req.current / req.target) * 100, 100)}%` }}
@@ -83,7 +83,7 @@ const TierStack = ({ tiers }: TierStackProps) => {
                                 </div>
                                 {tier.nextUnlock && (
                                     <div className="mt-4 p-3 bg-white/10 rounded-lg backdrop-blur-sm border border-white/10">
-                                        <p className="text-xs font-medium text-blue-100 uppercase tracking-wider mb-1">Unlocks Next</p>
+                                        <p className="text-xs font-medium text-primary-100 uppercase tracking-wider mb-1">Unlocks Next</p>
                                         <p className="text-sm font-semibold text-white">{tier.nextUnlock}</p>
                                     </div>
                                 )}

@@ -83,7 +83,7 @@ const OnboardingChat = ({ onClose }: { onClose: () => void }) => {
             animate={{ opacity: 1, y: 0 }}
             className="mt-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm"
         >
-            <div className="flex items-center gap-2 mb-3 text-blue-600 dark:text-blue-400 font-bold">
+            <div className="flex items-center gap-2 mb-3 text-primary-600 dark:text-primary-400 font-bold">
                 <Sparkles size={18} />
                 <h3>Your 90-Day Roadmap</h3>
             </div>
@@ -98,8 +98,8 @@ const OnboardingChat = ({ onClose }: { onClose: () => void }) => {
                         <li>Submit your first 3 leads.</li>
                     </ul>
                 </div>
-                <div className="relative pl-4 border-l-2 border-blue-200 dark:border-blue-900">
-                    <div className="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-blue-500"></div>
+                <div className="relative pl-4 border-l-2 border-primary-200 dark:border-primary-900">
+                    <div className="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-primary-500"></div>
                     <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Days 31-60</span>
                     <p className="font-medium text-gray-900 dark:text-white">Momentum & Networking</p>
                     <ul className="mt-1 space-y-1 text-gray-600 dark:text-gray-400 list-disc list-inside text-xs">
@@ -108,8 +108,8 @@ const OnboardingChat = ({ onClose }: { onClose: () => void }) => {
                         <li>Close your first 2 deals.</li>
                     </ul>
                 </div>
-                <div className="relative pl-4 border-l-2 border-purple-200 dark:border-purple-900">
-                    <div className="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-purple-500"></div>
+                <div className="relative pl-4 border-l-2 border-secondary-200 dark:border-secondary-900">
+                    <div className="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-secondary-500"></div>
                     <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Days 61-90</span>
                     <p className="font-medium text-gray-900 dark:text-white">Scale & Recruit</p>
                     <ul className="mt-1 space-y-1 text-gray-600 dark:text-gray-400 list-disc list-inside text-xs">
@@ -121,7 +121,7 @@ const OnboardingChat = ({ onClose }: { onClose: () => void }) => {
             </div>
             <button
                 onClick={onClose}
-                className="mt-4 w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
+                className="mt-4 w-full py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium transition-colors"
             >
                 Start Executing Plan
             </button>
@@ -140,7 +140,7 @@ const OnboardingChat = ({ onClose }: { onClose: () => void }) => {
                 {/* Header */}
                 <div className="p-4 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center bg-gray-50 dark:bg-gray-800/50">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-purple-600 flex items-center justify-center shadow-lg shadow-purple-500/20">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-primary-500 to-secondary-600 flex items-center justify-center shadow-lg shadow-secondary-500/20">
                             <Sparkles className="text-white" size={20} />
                         </div>
                         <div>
@@ -163,7 +163,7 @@ const OnboardingChat = ({ onClose }: { onClose: () => void }) => {
                             <div className={`
                                 max-w-[80%] rounded-2xl p-3 text-sm
                                 ${msg.sender === 'user'
-                                    ? 'bg-blue-600 text-white rounded-br-none'
+                                    ? 'bg-primary-600 text-white rounded-br-none'
                                     : 'bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 shadow-sm border border-gray-100 dark:border-gray-700 rounded-bl-none'}
                             `}>
                                 <p>{msg.text}</p>
@@ -173,7 +173,7 @@ const OnboardingChat = ({ onClose }: { onClose: () => void }) => {
                                             <button
                                                 key={opt}
                                                 onClick={() => handleSendMessage(opt)}
-                                                className="block w-full text-left px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 text-xs font-medium transition-colors border border-gray-200 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-800"
+                                                className="block w-full text-left px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 text-xs font-medium transition-colors border border-gray-200 dark:border-gray-700 hover:border-primary-200 dark:hover:border-primary-800"
                                             >
                                                 {opt}
                                             </button>
@@ -211,12 +211,12 @@ const OnboardingChat = ({ onClose }: { onClose: () => void }) => {
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 placeholder="Type your answer..."
-                                className="flex-1 bg-gray-100 dark:bg-gray-900 border-0 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 dark:text-white"
+                                className="flex-1 bg-gray-100 dark:bg-gray-900 border-0 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-primary-500 dark:text-white"
                             />
                             <button
                                 type="submit"
                                 disabled={!inputValue.trim() || isTyping}
-                                className="p-2.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                className="p-2.5 bg-primary-600 text-white rounded-xl hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                             >
                                 <Send size={18} />
                             </button>

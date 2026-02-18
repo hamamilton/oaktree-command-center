@@ -9,7 +9,7 @@ const Landing = () => {
             <div className="max-w-md w-full text-center space-y-8 animate-fade-in">
                 {/* Logo / Brand */}
                 <div className="flex justify-center mb-6">
-                    <div className="bg-blue-600 p-4 rounded-2xl shadow-lg shadow-blue-600/20">
+                    <div className="bg-primary-600 p-4 rounded-2xl shadow-lg shadow-primary-600/20">
                         <TrendingUp size={40} className="text-white" />
                     </div>
                 </div>
@@ -31,7 +31,7 @@ const Landing = () => {
                         <p className="text-xs text-gray-500 dark:text-gray-400">Track production</p>
                     </div>
                     <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <Users className="mx-auto text-blue-500 mb-2" size={24} />
+                        <Users className="mx-auto text-primary-500 mb-2" size={24} />
                         <h3 className="font-semibold text-gray-900 dark:text-white text-sm">Grow Team</h3>
                         <p className="text-xs text-gray-500 dark:text-gray-400">Visual org chart</p>
                     </div>
@@ -41,7 +41,7 @@ const Landing = () => {
                 <div className="space-y-4">
                     <button
                         onClick={() => navigate('/apply')}
-                        className="w-full py-3.5 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg shadow-blue-600/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                        className="w-full py-3.5 px-6 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-semibold shadow-lg shadow-primary-600/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
                     >
                         Apply to Join Oaktree
                         <ArrowRight size={18} />

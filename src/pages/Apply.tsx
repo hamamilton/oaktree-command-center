@@ -58,7 +58,7 @@ const Apply = () => {
                         type="text"
                         value={formData.firstName}
                         onChange={e => updateField('firstName', e.target.value)}
-                        className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none dark:text-white"
+                        className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none dark:text-white"
                         placeholder="Jane"
                     />
                 </div>
@@ -68,7 +68,7 @@ const Apply = () => {
                         type="text"
                         value={formData.lastName}
                         onChange={e => updateField('lastName', e.target.value)}
-                        className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none dark:text-white"
+                        className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none dark:text-white"
                         placeholder="Doe"
                     />
                 </div>
@@ -79,7 +79,7 @@ const Apply = () => {
                     type="email"
                     value={formData.email}
                     onChange={e => updateField('email', e.target.value)}
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none dark:text-white"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none dark:text-white"
                     placeholder="jane@example.com"
                 />
             </div>
@@ -89,7 +89,7 @@ const Apply = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={e => updateField('phone', e.target.value)}
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none dark:text-white"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none dark:text-white"
                     placeholder="(555) 123-4567"
                 />
             </div>
@@ -105,7 +105,7 @@ const Apply = () => {
                     type="text"
                     value={formData.nmls}
                     onChange={e => updateField('nmls', e.target.value)}
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none dark:text-white"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none dark:text-white"
                     placeholder="123456"
                 />
             </div>
@@ -114,7 +114,7 @@ const Apply = () => {
                 <select
                     value={formData.role}
                     onChange={e => updateField('role', e.target.value)}
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none dark:text-white appearance-none"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none dark:text-white appearance-none"
                 >
                     <option>Loan Officer</option>
                     <option>Recruiting Agent</option>
@@ -127,7 +127,7 @@ const Apply = () => {
                 <select
                     value={formData.experience}
                     onChange={e => updateField('experience', e.target.value)}
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none dark:text-white appearance-none"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none dark:text-white appearance-none"
                 >
                     <option>Less than 1 year</option>
                     <option>1-2 years</option>
@@ -146,7 +146,7 @@ const Apply = () => {
                 <select
                     value={formData.incomeGoal}
                     onChange={e => updateField('incomeGoal', e.target.value)}
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none dark:text-white appearance-none"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none dark:text-white appearance-none"
                 >
                     <option>$50,000 - $100,000</option>
                     <option>$100,000 - $250,000</option>
@@ -154,12 +154,12 @@ const Apply = () => {
                     <option>$500,000+</option>
                 </select>
             </div>
-            <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-100 dark:border-blue-900/50">
-                <p className="text-sm text-blue-800 dark:text-blue-300">
+            <div className="p-4 bg-primary-50 dark:bg-primary-900/20 rounded-xl border border-primary-100 dark:border-primary-900/50">
+                <p className="text-sm text-primary-800 dark:text-primary-300">
                     "I am committed to following the Oaktree system to achieve my goals."
                 </p>
                 <div className="mt-3 flex items-center gap-2">
-                    <input type="checkbox" className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+                    <input type="checkbox" className="w-4 h-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500" />
                     <span className="text-xs text-gray-600 dark:text-gray-400">I agree to the Oaktree Partner Agreement</span>
                 </div>
             </div>
@@ -181,7 +181,7 @@ const Apply = () => {
             </div>
             <button
                 onClick={() => navigate('/dashboard')}
-                className="w-full py-3.5 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg shadow-blue-600/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                className="w-full py-3.5 px-6 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-semibold shadow-lg shadow-primary-600/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
             >
                 Go to Command Center
                 <ArrowRight size={18} />
@@ -208,7 +208,7 @@ const Apply = () => {
                 </button>
                 <div className="flex gap-1">
                     {[1, 2, 3].map(i => (
-                        <div key={i} className={`h-1.5 w-8 rounded-full transition-colors ${i <= step ? 'bg-blue-600' : 'bg-gray-200 dark:bg-gray-700'}`} />
+                        <div key={i} className={`h-1.5 w-8 rounded-full transition-colors ${i <= step ? 'bg-primary-600' : 'bg-gray-200 dark:bg-gray-700'}`} />
                     ))}
                 </div>
                 <div className="w-8" /> {/* Spacer */}
@@ -218,7 +218,7 @@ const Apply = () => {
             <div className="flex-1 flex flex-col max-w-md w-full mx-auto">
                 {/* Step Icon */}
                 <div className="mb-6">
-                    <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-sm">
+                    <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 flex items-center justify-center text-primary-600 dark:text-primary-400 shadow-sm">
                         {step === 1 && <User size={24} />}
                         {step === 2 && <Briefcase size={24} />}
                         {step === 3 && <Target size={24} />}
@@ -236,7 +236,7 @@ const Apply = () => {
                     <button
                         onClick={handleNext}
                         disabled={loading}
-                        className="w-full py-3.5 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg shadow-blue-600/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                        className="w-full py-3.5 px-6 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-semibold shadow-lg shadow-primary-600/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                     >
                         {loading ? <Loader2 className="animate-spin" size={20} /> : (
                             <>

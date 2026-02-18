@@ -17,7 +17,7 @@ const AppLayout = () => {
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="flex items-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-offset-2 hover:ring-blue-500 transition-all">
+                            <div className="w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-offset-2 hover:ring-primary-500 transition-all">
                                 <User size={20} className="text-gray-600 dark:text-gray-300" />
                             </div>
                         </div>
@@ -35,7 +35,7 @@ const AppLayout = () => {
                 <div className="flex justify-between items-center h-16 max-w-md mx-auto">
                     <Link
                         to="/"
-                        className={`flex flex-col items-center justify-center flex-1 h-full min-w-[50px] ${isActive('/') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
+                        className={`flex flex-col items-center justify-center flex-1 h-full min-w-[50px] ${isActive('/') ? 'text-primary-600 dark:text-primary-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
                             }`}
                     >
                         <Home size={22} strokeWidth={isActive('/') ? 2.5 : 2} />
@@ -44,7 +44,7 @@ const AppLayout = () => {
 
                     <Link
                         to="/production"
-                        className={`flex flex-col items-center justify-center flex-1 h-full min-w-[50px] ${isActive('/production') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
+                        className={`flex flex-col items-center justify-center flex-1 h-full min-w-[50px] ${isActive('/production') ? 'text-primary-600 dark:text-primary-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
                             }`}
                     >
                         <TrendingUp size={22} strokeWidth={isActive('/production') ? 2.5 : 2} />
@@ -52,14 +52,14 @@ const AppLayout = () => {
 
                     <Link
                         to="/community"
-                        className={`flex flex-col items-center justify-center flex-1 h-full min-w-[50px] ${isActive('/community') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
+                        className={`flex flex-col items-center justify-center flex-1 h-full min-w-[50px] ${isActive('/community') ? 'text-primary-600 dark:text-primary-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
                             }`}
                     >
                         {/* Center prominent button for Community/Feed */}
                         <div className={`
               w-12 h-12 rounded-2xl flex items-center justify-center mb-4 border-4 border-gray-50 dark:border-gray-900 shadow-lg
               ${isActive('/community')
-                                ? 'bg-gradient-to-br from-blue-500 to-indigo-600 text-white'
+                                ? 'bg-gradient-to-br from-primary-500 to-secondary-600 text-white'
                                 : 'bg-white dark:bg-gray-700 text-gray-500 dark:text-gray-300'}
             `}>
                             <Zap size={24} fill={isActive('/community') ? "currentColor" : "none"} />
@@ -68,7 +68,7 @@ const AppLayout = () => {
 
                     <Link
                         to="/organization"
-                        className={`flex flex-col items-center justify-center flex-1 h-full min-w-[50px] ${isActive('/organization') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
+                        className={`flex flex-col items-center justify-center flex-1 h-full min-w-[50px] ${isActive('/organization') ? 'text-primary-600 dark:text-primary-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
                             }`}
                     >
                         <Users size={22} strokeWidth={isActive('/organization') ? 2.5 : 2} />
@@ -76,7 +76,7 @@ const AppLayout = () => {
 
                     <Link
                         to="/growth"
-                        className={`flex flex-col items-center justify-center flex-1 h-full min-w-[50px] ${isActive('/growth') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
+                        className={`flex flex-col items-center justify-center flex-1 h-full min-w-[50px] ${isActive('/growth') ? 'text-primary-600 dark:text-primary-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
                             }`}
                     >
                         <BookOpen size={22} strokeWidth={isActive('/growth') ? 2.5 : 2} />

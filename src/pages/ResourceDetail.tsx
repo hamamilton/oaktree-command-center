@@ -26,7 +26,7 @@ const ResourceDetail = () => {
     if (loading) {
         return (
             <div className="flex items-center justify-center h-full min-h-[50vh]">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
             </div>
         );
     }
@@ -35,7 +35,7 @@ const ResourceDetail = () => {
         return (
             <div className="flex flex-col items-center justify-center h-full gap-4">
                 <p className="text-gray-500">Resource not found</p>
-                <button onClick={() => navigate(-1)} className="text-blue-600 hover:underline">Go Back</button>
+                <button onClick={() => navigate(-1)} className="text-primary-600 hover:underline">Go Back</button>
             </div>
         );
     }
@@ -61,7 +61,7 @@ const ResourceDetail = () => {
             </div>
 
             <div className="flex-1 space-y-4">
-                <span className="text-sm font-medium text-blue-600 dark:text-blue-400">{resource.category}</span>
+                <span className="text-sm font-medium text-primary-600 dark:text-primary-400">{resource.category}</span>
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight">{resource.title}</h1>
 
                 {/* Content Viewer Placeholder */}

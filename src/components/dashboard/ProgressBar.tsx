@@ -28,7 +28,7 @@ const ProgressBar = ({ current, target, label }: ProgressBarProps) => {
                     initial={{ width: 0 }}
                     animate={{ width: `${percentage}%` }}
                     transition={{ duration: 1, ease: 'easeOut' }}
-                    className="h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"
+                    className="h-full bg-gradient-to-r from-primary-500 to-secondary-600 rounded-full"
                 />
             </div>
         </div>

@@ -25,7 +25,7 @@ const AICoach = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-5 text-white shadow-xl relative overflow-hidden"
+                className="bg-gradient-to-r from-secondary-600 to-secondary-600 rounded-2xl p-5 text-white shadow-xl relative overflow-hidden"
             >
                 <div className="absolute top-0 right-0 p-2">
                     <button
@@ -42,11 +42,11 @@ const AICoach = () => {
                     </div>
                     <div className="flex-1">
                         <h3 className="font-bold text-lg mb-1">Coach Insight</h3>
-                        <p className="text-indigo-100 text-sm mb-3">
+                        <p className="text-secondary-100 text-sm mb-3">
                             {suggestions[0].text}
                         </p>
                         {suggestions[0].action && (
-                            <button className="flex items-center gap-2 bg-white text-indigo-600 px-4 py-1.5 rounded-lg text-sm font-semibold hover:bg-indigo-50 transition-colors">
+                            <button className="flex items-center gap-2 bg-white text-secondary-600 px-4 py-1.5 rounded-lg text-sm font-semibold hover:bg-secondary-50 transition-colors">
                                 {suggestions[0].action}
                                 <ArrowRight size={14} />
                             </button>
@@ -60,9 +60,9 @@ const AICoach = () => {
                         <input
                             type="text"
                             placeholder="Ask me anything..."
-                            className="w-full bg-black/20 border border-white/10 rounded-lg pl-3 pr-10 py-2 text-sm text-white placeholder-indigo-200 focus:outline-none focus:bg-black/30 transition-colors"
+                            className="w-full bg-black/20 border border-white/10 rounded-lg pl-3 pr-10 py-2 text-sm text-white placeholder-secondary-200 focus:outline-none focus:bg-black/30 transition-colors"
                         />
-                        <button className="absolute right-2 top-1/2 -translate-y-1/2 text-indigo-200 hover:text-white">
+                        <button className="absolute right-2 top-1/2 -translate-y-1/2 text-secondary-200 hover:text-white">
                             <MessageSquare size={16} />
                         </button>
                     </div>

@@ -29,7 +29,7 @@ const Organization = () => {
     if (loading) {
         return (
             <div className="flex items-center justify-center h-full min-h-[50vh]">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
             </div>
         );
     }
@@ -47,7 +47,7 @@ const Organization = () => {
                     <button
                         onClick={() => setViewMode('list')}
                         className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${viewMode === 'list'
-                            ? 'bg-white dark:bg-gray-600 text-blue-600 dark:text-blue-300 shadow-sm'
+                            ? 'bg-white dark:bg-gray-600 text-primary-600 dark:text-primary-300 shadow-sm'
                             : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
                             }`}
                         title="List View"
@@ -57,7 +57,7 @@ const Organization = () => {
                     <button
                         onClick={() => setViewMode('chart')}
                         className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${viewMode === 'chart'
-                            ? 'bg-white dark:bg-gray-600 text-blue-600 dark:text-blue-300 shadow-sm'
+                            ? 'bg-white dark:bg-gray-600 text-primary-600 dark:text-primary-300 shadow-sm'
                             : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
                             }`}
                         title="Chart View"
@@ -71,7 +71,7 @@ const Organization = () => {
                     <input
                         type="text"
                         placeholder="Search team..."
-                        className="w-full pl-9 pr-4 py-2 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-600 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-white"
+                        className="w-full pl-9 pr-4 py-2 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-600 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 dark:text-white"
                     />
                 </div>
             </div>

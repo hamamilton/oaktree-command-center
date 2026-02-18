@@ -38,7 +38,7 @@ const EarningsCard = ({ data }: EarningsCardProps) => {
             <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 dark:bg-gray-700/50 p-3 rounded-xl">
                     <div className="flex items-center gap-2 mb-1">
-                        <div className="p-1.5 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 dark:text-blue-400">
+                        <div className="p-1.5 bg-primary-100 dark:bg-primary-900/30 rounded-lg text-primary-600 dark:text-primary-400">
                             <TrendingUp size={16} />
                         </div>
                         <span className="text-xs text-gray-500 dark:text-gray-400">Projected</span>
@@ -48,7 +48,7 @@ const EarningsCard = ({ data }: EarningsCardProps) => {
 
                 <div className="bg-gray-50 dark:bg-gray-700/50 p-3 rounded-xl">
                     <div className="flex items-center gap-2 mb-1">
-                        <div className="p-1.5 bg-purple-100 dark:bg-purple-900/30 rounded-lg text-purple-600 dark:text-purple-400">
+                        <div className="p-1.5 bg-secondary-100 dark:bg-secondary-900/30 rounded-lg text-secondary-600 dark:text-secondary-400">
                             <DollarSign size={16} />
                         </div>
                         <span className="text-xs text-gray-500 dark:text-gray-400">Rev Share</span>

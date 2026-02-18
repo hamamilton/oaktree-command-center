@@ -55,7 +55,7 @@ const Pipeline = () => {
     if (loading) {
         return (
             <div className="flex items-center justify-center h-full min-h-[50vh]">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
             </div>
         );
     }
@@ -79,7 +79,7 @@ const Pipeline = () => {
                     <input
                         type="text"
                         placeholder="Search borrower..."
-                        className="w-full pl-9 pr-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-white"
+                        className="w-full pl-9 pr-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 dark:text-white"
                     />
                 </div>
                 <button className="p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">
@@ -96,7 +96,7 @@ const Pipeline = () => {
                         className={`
               px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors
               ${filterStage === stage
-                                ? 'bg-blue-600 text-white'
+                                ? 'bg-primary-600 text-white'
                                 : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'}
             `}
                     >
@@ -117,7 +117,7 @@ const Pipeline = () => {
                             <div className="flex items-center gap-2 mt-1">
                                 <span className="text-xs text-gray-500 dark:text-gray-400">{deal.loanType}</span>
                                 <span className="w-1 h-1 rounded-full bg-gray-300"></span>
-                                <span className="text-xs text-blue-600 dark:text-blue-400">{deal.stage}</span>
+                                <span className="text-xs text-primary-600 dark:text-primary-400">{deal.stage}</span>
                             </div>
                         </div>
                         <div className="text-right">

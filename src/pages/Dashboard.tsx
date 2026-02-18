@@ -52,7 +52,7 @@ const Dashboard = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-full min-h-[50vh]">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
       </div>
     );
   }
@@ -83,10 +83,10 @@ const Dashboard = () => {
             target={250000}
           />
           {/* Placeholder for future widgets */}
-          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl p-6 text-white shadow-lg">
+          <div className="bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-2xl p-6 text-white shadow-lg">
             <h3 className="font-bold text-lg mb-2">Recruit a Friend</h3>
-            <p className="text-indigo-100 text-sm mb-4">Earn up to 50bps on their production.</p>
-            <button className="bg-white text-indigo-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-50 transition-colors w-full">
+            <p className="text-secondary-100 text-sm mb-4">Earn up to 50bps on their production.</p>
+            <button className="bg-white text-secondary-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-secondary-50 transition-colors w-full">
               Copy Referral Link
             </button>
           </div>

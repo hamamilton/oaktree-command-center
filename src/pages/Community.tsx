@@ -28,7 +28,7 @@ const Community = () => {
     if (loading) {
         return (
             <div className="flex items-center justify-center h-full min-h-[50vh]">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
             </div>
         );
     }
@@ -42,7 +42,7 @@ const Community = () => {
                 </div>
                 <button
                     onClick={() => setIsReferralModalOpen(true)}
-                    className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2 shadow-lg shadow-blue-500/20"
+                    className="bg-primary-600 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-primary-700 transition-colors flex items-center gap-2 shadow-lg shadow-primary-500/20"
                 >
                     <UserPlus size={18} />
                     Send Referral
@@ -63,7 +63,7 @@ const Community = () => {
                                 {post.author.avatarUrl ? (
                                     <img src={post.author.avatarUrl} alt={post.author.name} className="w-10 h-10 rounded-full object-cover" />
                                 ) : (
-                                    <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold">
+                                    <div className="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 font-bold">
                                         {post.author.name.charAt(0)}
                                     </div>
                                 )}
@@ -92,7 +92,7 @@ const Community = () => {
                                         <Heart size={18} />
                                         <span>{post.likes}</span>
                                     </button>
-                                    <button className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-blue-500 transition-colors text-sm">
+                                    <button className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-primary-500 transition-colors text-sm">
                                         <MessageCircle size={18} />
                                         <span>Comment</span>
                                     </button>
