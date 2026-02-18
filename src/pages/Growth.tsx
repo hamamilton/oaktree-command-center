@@ -2,13 +2,14 @@
 import { useEffect, useState } from 'react';
 import { fetchResources } from '../services/mockData';
 import type { Resource } from '../services/mockData';
-import { PlayCircle, FileText, Link as LinkIcon, Download } from 'lucide-react';
+import { PlayCircle, FileText, Link as LinkIcon, Download, Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Growth = () => {
     const [resources, setResources] = useState<Resource[]>([]);
     const [loading, setLoading] = useState(true);
     const [activeCategory, setActiveCategory] = useState<string>('All');
+    const [searchQuery, setSearchQuery] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -26,9 +27,11 @@ const Growth = () => {
         loadData();
     }, []);
 
-    const filteredResources = activeCategory === 'All'
-        ? resources
-        : resources.filter(r => r.category === activeCategory);
+    const filteredResources = resources.filter(r => {
+        const matchesCategory = activeCategory === 'All' || r.category === activeCategory;
+        const matchesSearch = r.title.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+    });
 
     const categories = ['All', 'Training', 'Marketing', 'Scripts'];
 
@@ -47,6 +50,18 @@ const Growth = () => {
                 <p className="text-gray-500 dark:text-gray-400 text-sm">Tools and training to scale your business.</p>
             </div>
 
+            {/* Search Bar */}
+            <div className="relative">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                <input
+                    type="text"
+                    placeholder="Search resources, scripts, and more..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-white shadow-sm"
+                />
+            </div>
+
             <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
                 {categories.map(category => (
                     <button
@@ -56,7 +71,7 @@ const Growth = () => {
               px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors
               ${activeCategory === category
                                 ? 'bg-blue-600 text-white'
-                                : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}
+                                : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'}
             `}
                     >
                         {category}
