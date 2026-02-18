@@ -13,14 +13,22 @@ import EarningsCard from '../components/dashboard/EarningsCard';
 import ProgressBar from '../components/dashboard/ProgressBar';
 import PipelineSnapshot from '../components/dashboard/PipelineSnapshot';
 import AICoach from '../components/ai/AICoach';
+import OnboardingChat from '../components/ai/OnboardingChat';
 
 const Dashboard = () => {
   const [earnings, setEarnings] = useState<EarningsData | null>(null);
   const [pipeline, setPipeline] = useState<PipelineStage[]>([]);
   const [user, setUser] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showOnboarding, setShowOnboarding] = useState(false);
 
   useEffect(() => {
+    // Check for first-time login
+    const hasOnboarded = localStorage.getItem('oaktree_onboarding_complete');
+    if (!hasOnboarded) {
+      setTimeout(() => setShowOnboarding(true), 1500);
+    }
+
     const loadData = async () => {
       try {
         const [earningsData, pipelineData, userData] = await Promise.all([
@@ -88,6 +96,11 @@ const Dashboard = () => {
           <PipelineSnapshot data={pipeline} />
         </div>
       </div>
+
+      {showOnboarding && <OnboardingChat onClose={() => {
+        setShowOnboarding(false);
+        localStorage.setItem('oaktree_onboarding_complete', 'true');
+      }} />}
     </div>
   );
 };
