@@ -319,7 +319,7 @@ export const MOCK_COMMUNITY_FEED: CommunityPost[] = [
     {
         id: 'p2',
         type: 'announcement',
-        author: { name: 'Oaktree Corporate' },
+        author: { name: 'BuildU Corporate' },
         content: '🚀 New "Jumbo Elite" product is live! Rates as low as 6.125%. Check the resource hub for guidelines.',
         timestamp: '5 hours ago',
         likes: 45

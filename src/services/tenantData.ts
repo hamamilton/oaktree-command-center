@@ -102,7 +102,7 @@ export const ALL_PERMISSIONS: Permission[] = [
 
 export const MOCK_COMPANY: Company = {
     id: 'company-oaktree',
-    name: 'Oaktree Funding',
+    name: 'BuildU',
     slug: 'oaktree',
     logoUrl: '/icon-192.png',
     primaryColor: '#21A843',

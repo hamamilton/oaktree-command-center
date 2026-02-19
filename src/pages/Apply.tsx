@@ -156,11 +156,11 @@ const Apply = () => {
             </div>
             <div className="p-4 bg-primary-50 dark:bg-primary-900/20 rounded-xl border border-primary-100 dark:border-primary-900/50">
                 <p className="text-sm text-primary-800 dark:text-primary-300">
-                    "I am committed to following the Oaktree system to achieve my goals."
+                    "I am committed to following the BuildU system to achieve my goals."
                 </p>
                 <div className="mt-3 flex items-center gap-2">
                     <input type="checkbox" className="w-4 h-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500" />
-                    <span className="text-xs text-gray-600 dark:text-gray-400">I agree to the Oaktree Partner Agreement</span>
+                    <span className="text-xs text-gray-600 dark:text-gray-400">I agree to the BuildU Partner Agreement</span>
                 </div>
             </div>
         </div>
@@ -174,7 +174,7 @@ const Apply = () => {
                 </div>
             </div>
             <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Welcome to Oaktree!</h2>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Welcome to BuildU!</h2>
                 <p className="text-gray-500 dark:text-gray-400 mt-2 max-w-xs mx-auto">
                     Your application has been approved. Your profile is ready.
                 </p>

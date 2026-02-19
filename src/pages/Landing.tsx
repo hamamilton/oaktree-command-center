@@ -11,14 +11,14 @@ const Landing = () => {
                 <div className="flex justify-center mb-6">
                     <img
                         src="/icon-192.png"
-                        alt="Oaktree"
+                        alt="BuildU"
                         className="w-20 h-20 rounded-2xl shadow-lg shadow-primary-600/20"
                     />
                 </div>
 
                 <div className="space-y-2">
                     <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight">
-                        Oaktree Command Center
+                        BuildU Command Center
                     </h1>
                     <p className="text-gray-500 dark:text-gray-400">
                         The elite platform for modern loan officers.
@@ -45,7 +45,7 @@ const Landing = () => {
                         onClick={() => navigate('/apply')}
                         className="w-full py-3.5 px-6 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-semibold shadow-lg shadow-primary-600/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
                     >
-                        Apply to Join Oaktree
+                        Apply to Join BuildU
                         <ArrowRight size={18} />
                     </button>
 

@@ -35,9 +35,9 @@ const AppLayout = () => {
 
                 {/* Brand */}
                 <div className="flex items-center gap-3 px-5 py-5 border-b border-gray-100 dark:border-gray-700">
-                    <img src="/icon-192.png" alt="Oaktree" className="w-9 h-9 rounded-xl shadow-sm" />
+                    <img src="/icon-192.png" alt="BuildU" className="w-9 h-9 rounded-xl shadow-sm" />
                     <div>
-                        <span className="font-bold text-base text-gray-900 dark:text-white tracking-tight block leading-tight">Oaktree</span>
+                        <span className="font-bold text-base text-gray-900 dark:text-white tracking-tight block leading-tight">BuildU</span>
                         <span className="text-[10px] text-gray-400 uppercase tracking-wider">Command Center</span>
                     </div>
                 </div>
@@ -95,8 +95,8 @@ const AppLayout = () => {
                 {/* Mobile-only topbar */}
                 <header className="md:hidden bg-white dark:bg-gray-800 shadow-sm px-4 py-3 sticky top-0 z-10 flex justify-between items-center">
                     <div className="flex items-center gap-2">
-                        <img src="/icon-192.png" alt="Oaktree" className="w-7 h-7 rounded-lg" />
-                        <span className="font-bold text-base text-gray-900 dark:text-white tracking-tight">Oaktree</span>
+                        <img src="/icon-192.png" alt="BuildU" className="w-7 h-7 rounded-lg" />
+                        <span className="font-bold text-base text-gray-900 dark:text-white tracking-tight">BuildU</span>
                     </div>
                     <button
                         onClick={() => navigate('/profile/current-user')}

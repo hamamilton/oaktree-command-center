@@ -14,7 +14,7 @@ const OnboardingChat = ({ onClose }: { onClose: () => void }) => {
         {
             id: '1',
             sender: 'ai',
-            text: "Welcome to Oaktree! I'm your AI Performance Coach. Let's build your custom roadmap to success. First, what is your primary income goal for the next 12 months?",
+            text: "Welcome to BuildU! I'm your AI Performance Coach. Let's build your custom roadmap to success. First, what is your primary income goal for the next 12 months?",
             options: ['$50k - $100k', '$100k - $250k', '$250k+', 'Maximize RevShare']
         }
     ]);
@@ -93,7 +93,7 @@ const OnboardingChat = ({ onClose }: { onClose: () => void }) => {
                     <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Days 1-30</span>
                     <p className="font-medium text-gray-900 dark:text-white">Foundation & Licensing</p>
                     <ul className="mt-1 space-y-1 text-gray-600 dark:text-gray-400 list-disc list-inside text-xs">
-                        <li>Complete Oaktree Academy modules 1-3.</li>
+                        <li>Complete BuildU Academy modules 1-3.</li>
                         <li>Set up your social media profiles.</li>
                         <li>Submit your first 3 leads.</li>
                     </ul>
@@ -144,7 +144,7 @@ const OnboardingChat = ({ onClose }: { onClose: () => void }) => {
                             <Sparkles className="text-white" size={20} />
                         </div>
                         <div>
-                            <h2 className="font-bold text-gray-900 dark:text-white text-sm">Oaktree AI Coach</h2>
+                            <h2 className="font-bold text-gray-900 dark:text-white text-sm">BuildU AI Coach</h2>
                             <p className="text-xs text-green-500 font-medium flex items-center gap-1">
                                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
                                 Online

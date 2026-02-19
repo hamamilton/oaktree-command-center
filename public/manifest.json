@@ -1,7 +1,7 @@
 {
-    "name": "Oaktree Command Center",
-    "short_name": "Oaktree",
-    "description": "Oaktree mortgage team performance and production tracker.",
+    "name": "BuildU Command Center",
+    "short_name": "BuildU",
+    "description": "BuildU team performance and production tracker.",
     "start_url": "/dashboard",
     "display": "standalone",
     "background_color": "#21A843",
