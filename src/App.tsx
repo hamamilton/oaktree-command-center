@@ -13,6 +13,10 @@ import ResourceDetail from './pages/ResourceDetail';
 import Admin from './pages/Admin';
 import Landing from './pages/Landing';
 import Apply from './pages/Apply';
+import AdminPortal from './pages/AdminPortal';
+import CompanySettings from './pages/CompanySettings';
+import UserManagement from './pages/UserManagement';
+import RoleManager from './pages/RoleManager';
 
 function App() {
   return (
@@ -35,6 +39,11 @@ function App() {
           <Route path="/growth" element={<Growth />} />
           <Route path="/growth/:resourceId" element={<ResourceDetail />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
+          {/* Admin Portal */}
+          <Route path="/admin-portal" element={<AdminPortal />} />
+          <Route path="/admin-portal/settings" element={<CompanySettings />} />
+          <Route path="/admin-portal/users" element={<UserManagement />} />
+          <Route path="/admin-portal/roles" element={<RoleManager />} />
         </Route>
       </Routes>
     </BrowserRouter>
