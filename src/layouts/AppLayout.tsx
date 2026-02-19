@@ -13,7 +13,8 @@ const AppLayout = () => {
             <header className="bg-white dark:bg-gray-800 shadow-sm p-4 sticky top-0 z-10 transition-colors">
                 <div className="flex justify-between items-center max-w-7xl mx-auto w-full">
                     <div className="flex items-center gap-2">
-                        <span className="font-bold text-xl text-primary-600 dark:text-primary-400 tracking-tight">Oaktree</span>
+                        <img src="/icon-192.png" alt="Oaktree" className="w-8 h-8 rounded-lg" />
+                        <span className="font-bold text-xl text-gray-900 dark:text-white tracking-tight">Oaktree</span>
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="flex items-center gap-2">

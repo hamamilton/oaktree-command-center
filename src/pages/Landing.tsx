@@ -9,9 +9,11 @@ const Landing = () => {
             <div className="max-w-md w-full text-center space-y-8 animate-fade-in">
                 {/* Logo / Brand */}
                 <div className="flex justify-center mb-6">
-                    <div className="bg-primary-600 p-4 rounded-2xl shadow-lg shadow-primary-600/20">
-                        <TrendingUp size={40} className="text-white" />
-                    </div>
+                    <img
+                        src="/icon-192.png"
+                        alt="Oaktree"
+                        className="w-20 h-20 rounded-2xl shadow-lg shadow-primary-600/20"
+                    />
                 </div>
 
                 <div className="space-y-2">
@@ -60,10 +62,13 @@ const Landing = () => {
                 </div>
             </div>
 
-            <div className="absolute bottom-6 text-center">
-                <p className="text-[10px] text-gray-300 dark:text-gray-600 uppercase tracking-widest font-semibold">
-                    Powered by Oaktree Funding
-                </p>
+            <div className="absolute bottom-6 text-center flex flex-col items-center gap-1">
+                <p className="text-[10px] text-gray-400 dark:text-gray-500 uppercase tracking-widest font-medium">Powered by</p>
+                <img
+                    src="/buildu-logo.png"
+                    alt="BuildU"
+                    className="h-6 opacity-60 dark:opacity-40 hover:opacity-100 transition-opacity"
+                />
             </div>
         </div>
     );
